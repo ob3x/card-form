@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222222;
+  font-family: "Poppins", sans-serif;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5em;
+  width: 36em;
+  border-radius: 1.5em;
+  background-color: #dcdd90;
+  color: #222222;
+  z-index: 1;
+  overflow: hidden;
+}
+.form::after {
+  position: absolute;
+  bottom: -3%;
+  left: -20%;
+  width: 130%;
+  transform: rotate(357deg);
+  height: 69%;
+  background-color: rgba(0, 0, 0, 0.05);
+  content: "";
+  z-index: -1;
+}
+.form::before {
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 15em;
+  height: 15em;
+  background-image: url(../../settings.svg);
+  background-repeat: no-repeat;
+  animation: rotate360 linear 480s infinite;
+  content: "";
+  z-index: -10;
+}
+.form__title {
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+.form-box {
+  height: 9em;
+}
+.form-box__title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.form-box__input {
+  height: 3em;
+  width: 100%;
+  padding: 1em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  border: 0.1em solid transparent;
+  font-weight: bold;
+  color: #222222;
+  cursor: pointer;
+}
+.form-box__input:focus {
+  outline: none;
+}
+.form-box__text {
+  color: rgb(197, 53, 53);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.form-secoundBox {
+  display: flex;
+  justify-content: space-between;
+}
+.form-secoundBox__item {
+  display: flex;
+  flex-direction: column;
+  width: 13.5em;
+}
+.form-btn {
+  height: 3em;
+  margin: 4em 0 1em;
+  border-radius: 0.5em;
+  border: 0.2em solid #222222;
+  background-color: #222222;
+  font-weight: bold;
+  color: #dcdd90;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.5s, color 0.5s;
+}
+.form-btn:hover {
+  background-color: transparent;
+  color: #222222;
+}
+.form-btn__send {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222222;
+}
+
+.active {
+  color: rgb(49, 180, 49);
+}
+
+.error {
+  border: 0.2em solid rgb(197, 53, 53);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

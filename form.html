@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="form">
+        <h1 class="form__title">Dołącz do nas!</h1>
+        <div class="form-box">
+            <label for="name" class="form-box__title">Imię*</label>
+            <input type="name" class="form-box__input personName">
+            <p class="form-box__text personNameError"></p>
+        </div>
+        <div class="form-box">
+            <label for="card" class="form-box__title">Numer karty*</label>
+            <input type="text" class="form-box__input creditCard" name="creditCardNumber" pattern="[0-9]{13,16}"
+                maxlength="19">
+            <p class="form-box__text creditCardError"></p>
+        </div>
+        <div class="form-secoundBox">
+            <div class="form-secoundBox__item">
+                <label for="Date" class="form-box__title">Data wygaśnięcia*</label>
+                <input type="text" class="form-box__input expiryDate" placeholder="MM/YY" maxlength="5">
+                <p class="form-box__text expiryDateError"></p>
+            </div>
+            <div class="form-secoundBox__item">
+                <label for="CVV" class="form-box__title">CVV*</label>
+                <input type="text" class="form-box__input secureCode" maxlength="3">
+                <p class="form-box__text secureCodError"></p>
+            </div>
+        </div>
+        <button class="form-btn">Wyślij</button>
+        <p class="form-btn__send"></p>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
